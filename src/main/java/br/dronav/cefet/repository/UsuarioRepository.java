@@ -7,8 +7,5 @@ import org.springframework.data.repository.query.Param;
 import br.dronav.cefet.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
-	
-	/*@Query("SELECT u FROM Usuario u WHERE u.email = :email AND u.senha = :senha")
-    Usuario autenticar(@Param("email") String email, @Param("senha") String senha);*/
 	Usuario findByEmail(String email);
 }
